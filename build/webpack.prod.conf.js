@@ -118,6 +118,6 @@ if (config.build.bundleAnalyzerReport) {
 }
 
 // for gh-pages
-config.build.assetsPublicPath = '/dist/'
+config.build.assetsPublicPath = '/'
 
 module.exports = webpackConfig
