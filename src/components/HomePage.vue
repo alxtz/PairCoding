@@ -173,8 +173,8 @@ export default {
       padding-right: 1.5vw;
       flex-grow: 1;
       flex-basis: 0;
-      margin-left: 1vw;
-      margin-right: 1vw;
+      margin-left: 1.5vw;
+      margin-right: 1.5vw;
       img {
         width: 100%;
         margin-bottom: 2.7vw;
@@ -187,13 +187,33 @@ export default {
     .imgColumn:last-child {
       margin-right: -6vw;
     }
-    .imgColumn:nth-child(even){
-      background-image: url('~@/assets/scrollBg1.png');
+    .imgColumn:nth-child(1){
+      background-image: url('~@/assets/bg1.png');
       background-size: 100% auto;
       animation: animatedBackground2 210s linear infinite;
     }
-    .imgColumn:nth-child(odd){
-      background-image: url('~@/assets/scrollBg1.png');
+    .imgColumn:nth-child(2){
+      background-image: url('~@/assets/bg2.png');
+      background-size: 100% auto;
+      animation: animatedBackground1 200s linear infinite;
+    }
+    .imgColumn:nth-child(3){
+      background-image: url('~@/assets/bg3.png');
+      background-size: 100% auto;
+      animation: animatedBackground2 210s linear infinite;
+    }
+    .imgColumn:nth-child(4){
+      background-image: url('~@/assets/bg4.png');
+      background-size: 100% auto;
+      animation: animatedBackground1 200s linear infinite;
+    }
+    .imgColumn:nth-child(5){
+      background-image: url('~@/assets/bg5.png');
+      background-size: 100% auto;
+      animation: animatedBackground2 90s linear infinite;
+    }
+    .imgColumn:nth-child(6){
+      background-image: url('~@/assets/bg6.png');
       background-size: 100% auto;
       animation: animatedBackground1 200s linear infinite;
     }
