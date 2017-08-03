@@ -85,6 +85,8 @@ export default {
 {
   background-color: #242629;
   border: 1px solid rgba(0,0,0,0);
+  position: relative;
+  z-index: 999;
 }
 
 .bgImg
@@ -94,6 +96,7 @@ export default {
   width: 100vw;
   background-image: url(~@/assets/bg_each.png);
   background-size: cover;
+  background-attachment: fixed;
 }
 .content
 {
@@ -101,6 +104,7 @@ export default {
   margin-left: 200pt;
   height: 500vh;
   position: relative;
+  top:0;
   z-index: 100;
 
   .title

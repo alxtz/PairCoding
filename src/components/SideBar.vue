@@ -26,6 +26,8 @@ export default {
 {
   width: 200pt;
   position: fixed;
+  left: 0px;
+  top:0px;
   height: 100vh;
 
   .pjName

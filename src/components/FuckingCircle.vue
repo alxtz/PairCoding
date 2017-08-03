@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="cr_bg">
+  <div class="cr_bg" :class="{'ooverflow':ooverflow}">
     <div class="title" :class="{'titleFuck1':titleFuck1,'titleFuck2':titleFuck2}">
       BE THE HUB
     </div>
@@ -39,20 +39,30 @@
     <div class="circle cirbg" :class="{fuck:shit[11]}">
 
     </div>
-    <div class="circle cir13" :class="{fuck:shit[12]}">
+    <div class="circle cirfinal" :class="{fuck:shit[12]}">
 
     </div>
+    <div class="circle shitCom" :class="{fuckSpecial:shit[12]}">
+      <BumpPage>
+      </BumpPage>
+    </div>
+
   </div>
 </template>
 
 <script>
+import BumpPage from './BumpPage.vue'
 export default {
   name:'FuckingCircle',
+  components:{
+    BumpPage,
+  },
   data(){
     return{
       shit:[false,false,false,false,false,false,false,false,false,false,false,false,false],
       titleFuck1:false,
-      titleFuck2:false
+      titleFuck2:false,
+      ooverflow:false
     }
   },
   mounted:function () {
@@ -75,8 +85,9 @@ export default {
       if(i==2){
         this.titleFuck1 = true
       }
-      if(i==8){
+      if(i==10){
         this.titleFuck2 = true
+        this.ooverflow=true
       }
       console.log('ss');
     },250)
@@ -86,6 +97,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.cirfinal{
+  background: #242629;
+}
+.ooverflow{
+  overflow: auto !important;
+}
+.shitCom{
+  // height: 100vh !important;
+  // width: 100vw !important;
+}
   .title{
     white-space: nowrap;
     color: #fff;
@@ -109,7 +130,7 @@ export default {
     background-color: #000;
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,10 +162,10 @@ export default {
     background: #f4ee41;
   }
   .cir11{
-    background: #41f48e;
+    background: #242629;
   }
   .cirbg{
-    background: #000;
+    background: #5e8aa7;
     transition: width 2.5s 0s cubic-bezier(0.18, 0.67, 0.54, 0.57),
                 height 2.5s 0s cubic-bezier(0.18, 0.67, 0.54, 0.57);
   }
@@ -153,5 +174,10 @@ export default {
     opacity: 1;
     width: 2000px;
     height: 2000px;
+  }
+  .fuckSpecial{
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
   }
 </style>
