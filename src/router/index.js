@@ -7,6 +7,7 @@ import BumpPage from '@/components/BumpPage'
 import CloudTicket from '@/components/CloudTicket'
 import EarTraining from '@/components/EarTraining'
 import MusicGalaxy from '@/components/MusicGalaxy'
+import FuckingCircle from '@/components/FuckingCircle'
 
 Vue.use(Router)
 
@@ -44,6 +45,11 @@ export default new Router({
       path: '/CloudTicket',
       name: 'CloudTicket',
       component: CloudTicket
+    },
+    {
+      path: '/FuckingCircle',
+      name: 'FuckingCircle',
+      component: FuckingCircle
     }
   ]
 })
